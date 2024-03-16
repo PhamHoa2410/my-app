@@ -1,7 +1,6 @@
 import * as React from 'react'
 import { useLocation, useNavigate } from 'react-router-dom'
 import Poster from './components/poster'
-import { fakeItems } from '../components/ListItem/interface'
 import ContentDetail from './components/content'
 import './styles.scss'
 import common from '../../utils/common'

@@ -1,6 +1,16 @@
-# Getting Started with Create React App
+Copyright [2024] [Pham Bich Hoa]
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+In this Project. I have create a simple list of Movie page. Where you can view the Now Playing Movie, Top Rated Movie, View Detail and Search for the Move.
+
+There are still some function that can developed, however due to lack of time because of my health so i cannot finish it.
+Some of the feature were:
+
+1. Rating the Movie
+2. Filter The Movie based on genres, time, rating,...
+3. Dark Mode
+4. Enchance the sumary view before click on the Card to see full detail,
+5. Some Acion in the Card Movie like add to favorites, voting,...
+6. Some optional feature in the Challenge
 
 ## Available Scripts
 

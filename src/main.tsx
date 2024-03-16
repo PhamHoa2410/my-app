@@ -9,7 +9,7 @@ import IndexPage from './Page/indexPage';
 class Router extends React.Component {
   render() {
     return (
-      <BrowserRouter basename='/movielist/'>
+      <BrowserRouter basename='/movielist'>
         <Routes>
           <Route path={'/login'} element={<Login />} />
           <Route path={"/"} element={<IndexPage />}>

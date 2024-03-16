@@ -1,0 +1,30 @@
+.search-content {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 30px 0px 0px 0px;
+    width: 100%;
+
+    .search-input {
+        width: 80%;
+
+        input {
+            height: 36px;
+            width: 100%;
+            padding: 8px;
+            border: 1px solid var(--primary-btn-color);
+            border-radius: 8px;
+
+            &:focus {
+                border: 1px solid var(--hover-btn-color);
+            }
+
+            &:focus-visible {
+                border: 1px solid var(--hover-btn-color);
+            }
+        }
+    }
+
+    .search-btn {
+        margin: 0
+    }
+}

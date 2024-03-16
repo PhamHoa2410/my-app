@@ -8,16 +8,7 @@
   height: 0;
   opacity: 0;
   z-index: 1051;
-  // -webkit-box-align: center;
-  // -ms-flex-align: center;
-  // align-items: center;
-  // -webkit-box-pack: center;
-  // -ms-flex-pack: center;
-  // justify-content: center;
   background-color: rgba(0, 0, 0, 0.5);
-  // display: -webkit-box;
-  // display: -ms-flexbox;
-  // display: flex;
   -webkit-transition: height 0ms 400ms, opacity 400ms 0ms;
   -o-transition: height 0ms 400ms, opacity 400ms 0ms;
   transition: height 0ms 400ms, opacity 400ms 0ms;
@@ -37,5 +28,5 @@
     left: 50%;
     transform: translate(-50%, -50%);
   }
-  
+
 }

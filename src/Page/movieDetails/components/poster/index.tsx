@@ -6,7 +6,7 @@ type ImageProps = {
 const Poster: React.FC<ImageProps> = (props) => {
     const { src } = props
     return (
-        <div className='img-styles'>
+        <div className='poster-styles'>
             <img src={src} />
         </div>
     )

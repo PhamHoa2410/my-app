@@ -1,17 +1,22 @@
 import * as React from 'react'
-import { useNavigate } from 'react-router-dom'
+import { useLocation, useNavigate } from 'react-router-dom'
 import Poster from './components/poster'
 import { fakeItems } from '../components/ListItem/interface'
+import ContentDetail from './components/content'
+import './styles.scss'
+import common from '../../utils/common'
 
 type DetailPages = {
 
 }
-
 const MovieDetailPages: React.FC<DetailPages> = () => {
+    const location = useLocation();
+    const data = location.state.data;
     return (
-        <div className="container--root">
-            <div className="container">
-                <Poster src={fakeItems.poster_path} />
+        <div className="container">
+            <div className="detail-container">
+                <Poster src={data.poster_path ? `${common.img_300}/${data.poster_path}` : common.unavailable} />
+                <ContentDetail detail={data} />
             </div>
         </div>
     )

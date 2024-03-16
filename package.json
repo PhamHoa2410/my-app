@@ -26,7 +26,9 @@
     "react-lottie": "^1.2.3",
     "react-autosuggest": "^9.4.3",
     "react-i18next": "^11.2.5",
-    "lodash": "^4.17.15"
+    "lodash": "^4.17.15",
+    "history": "^4.9.0",
+    "axios": "^0.19.0"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -69,6 +71,7 @@
   "devDependencies": {
     "@types/react": "^18.0.27",
     "@types/react-dom": "^18.0.10",
+    "@types/history": "^4.7.3",
     "@types/react-lottie": "^1.2.10",
     "@types/lodash": "^4.14.144",
     "@types/react-autosuggest": "^9.3.12",

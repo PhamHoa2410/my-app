@@ -1,27 +1,36 @@
 import * as React from 'react'
-import { ItemsProps, fakeData } from './interface';
+import { ItemsProps } from './interface';
 import Items from '../Items';
 import './styles.scss'
 import { useNavigate } from 'react-router-dom';
+import { Access_key } from '../../config';
+import common from '../../../utils/common';
+import { UseGetListRending } from './hooks';
+import Pagination from '../Pagination';
+import Loading from '../Loading';
 type ListItemsProps = {
-    data?: any
+    type: 'nowPlaying' | 'topRate'
 }
 const ListItems: React.FC<ListItemsProps> = (props) => {
-    const data = props.data ? props.data : fakeData
+    const { type } = props
     const navigate = useNavigate()
-
-    const seeDetail = () => {
-        navigate('/movieDatails')
-    }
+    const { getListMovie, nowPlaying, page, setPage, isShow, viewDetail } = UseGetListRending(type)
     return (
         <div className='list-container'>
+            <Loading isShow={isShow} />
             <div className='list-items'>
-                {data.map((item: ItemsProps, idx: number) => {
+                {nowPlaying.map((item: ItemsProps, idx: number) => {
                     return (
-                        <Items onClick={() => seeDetail()} key={idx} src={item.poster_path} title={item.original_title} release_date={item.release_date} />
+                        <Items onClick={() => viewDetail(item)}
+                            key={idx}
+                            src={item.poster_path ? `${common.img_300}/${item.poster_path}` : common.unavailable}
+                            title={item.name || item.title}
+                            media={item.media_type === "tv" ? "TV" : "Movie"}
+                            release_date={item.first_air_date || item.release_date} />
                     )
                 })}
             </div>
+            <Pagination page={page} setPage={setPage} />
         </div>
 
     )

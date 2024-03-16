@@ -4,6 +4,16 @@
     justify-content: space-evenly;
     flex-wrap: wrap;
 
+    p {
+        display: inline-block;
+        width: 100%;
+
+        span {
+            margin-left: 30px;
+            font-size: 15px;
+        }
+    }
+
     .poster-styles {
         width: 300px;
         height: 450px;
@@ -17,5 +27,10 @@
 
     .detail-content {
         width: 60%
+    }
+
+    .tag-content {
+        display: flex;
+        flex-wrap: wrap;
     }
 }

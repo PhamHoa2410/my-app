@@ -13,15 +13,14 @@ type ListItemsProps = {
 }
 const ListItems: React.FC<ListItemsProps> = (props) => {
     const { type } = props
-    const navigate = useNavigate()
-    const { getListMovie, nowPlaying, page, setPage, isShow, viewDetail } = UseGetListRending(type)
+    const { nowPlaying, page, setPage, isShow, viewDetail } = UseGetListRending(type)
     return (
         <div className='list-container'>
             <Loading isShow={isShow} />
             <div className='list-items'>
                 {nowPlaying.map((item: ItemsProps, idx: number) => {
                     return (
-                        <Items onClick={() => viewDetail(item)}
+                        <Items onClick={() => viewDetail(item.id)}
                             key={idx}
                             src={item.poster_path ? `${common.img_300}/${item.poster_path}` : common.unavailable}
                             title={item.name || item.title}

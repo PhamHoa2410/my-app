@@ -4,6 +4,8 @@ import Poster from './components/poster'
 import ContentDetail from './components/content'
 import './styles.scss'
 import common from '../../utils/common'
+import { UseGetDetailMovies } from './hook'
+import Loading from '../components/Loading'
 
 type DetailPages = {
 
@@ -11,11 +13,13 @@ type DetailPages = {
 const MovieDetailPages: React.FC<DetailPages> = () => {
     const location = useLocation();
     const data = location.state.data;
+    const { getDetail, isShow } = UseGetDetailMovies(data)
     return (
         <div className="container">
+            <Loading isShow={isShow} />
             <div className="detail-container">
-                <Poster src={data.poster_path ? `${common.img_300}/${data.poster_path}` : common.unavailable} />
-                <ContentDetail detail={data} />
+                <Poster src={getDetail?.poster_path ? `${common.img_300}/${getDetail?.poster_path}` : common.unavailable} />
+                <ContentDetail detail={getDetail} />
             </div>
         </div>
     )

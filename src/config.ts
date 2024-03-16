@@ -6,5 +6,6 @@ export default {
     MOSTPLAYING: "movie/now_playing",
     TOPRATES: "movie/top_rated",
     SEARCHMULTI: "search/multi",
+    MOVIEDETAIL: "movie",
   },
 };

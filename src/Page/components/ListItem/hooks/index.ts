@@ -10,6 +10,7 @@ export const UseGetListRending = (type: string) => {
     type === "nowPlaying"
       ? config.resouce.MOSTPLAYING
       : config.resouce.TOPRATES;
+
   const [nowPlaying, setNowPlaying] = React.useState([]);
   const [page, setPage] = React.useState<number>(1);
   const [isShow, setIsShow] = React.useState<boolean>(false);
@@ -25,7 +26,6 @@ export const UseGetListRending = (type: string) => {
       }
     } catch (error) {
       const err = error as any;
-      console.log(err);
       common.openError({
         title: "Error",
         text: err.status_message || "There is some Error! Please try again",
@@ -36,11 +36,6 @@ export const UseGetListRending = (type: string) => {
       window.scrollTo(0, 0);
     }
   };
-
-  // initialised the page state with the initial value of 1
-  React.useEffect(() => {
-    getListMovie();
-  }, [page]);
 
   React.useEffect(() => {
     getListMovie();

@@ -1,0 +1,34 @@
+.tab-content {
+    justify-content: center;
+    flex-direction: row;
+    margin-top: 15px;
+    display: flex;
+
+    .tab-header-content {
+        flex: 1;
+        border-radius: 12px 12px 0px 0px;
+        height: 20px;
+        padding: 14px 16px;
+        gap: 12px;
+        background: var(--secondary-bg-color);
+        text-align: center;
+        cursor: pointer;
+
+        .text-content {
+            color: var(--black-color);
+            font-size: 16px;
+            font-weight: 700;
+            padding: 0;
+            margin: 0
+        }
+    }
+
+    .tab-header-content-active {
+        @extend .tab-header-content;
+        background: var(--primary-bg-color);
+
+        .text-content {
+            color: var(--white-color);
+        }
+    }
+}

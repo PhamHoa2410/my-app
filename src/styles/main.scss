@@ -1,0 +1,76 @@
+@import 'color.scss';
+@import 'button.scss';
+
+body {
+    font-family: 'Calibri', sans-serif;
+    color: #373737;
+    font-size: 0.9375rem;
+}
+
+@media (min-width: 576px) {}
+
+@media (min-width: 768px) {}
+
+@media (min-width: 992px) {}
+
+@media (min-width: 1200px) {}
+
+@media (max-width: 374.98px) {
+    html {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 575.98px) {}
+
+@media (max-width: 767.98px) {}
+
+@media (max-width: 991.98px) {}
+
+@media (max-width: 1199.98px) {}
+
+@media all and (-ms-high-contrast: none),
+(-ms-high-contrast: active) {
+
+    /* IE10+ CSS */
+    html {
+        font-size: 14px;
+        --numberOfDiscoverColumns: 3;
+        --discoverColumnPadding: 30px;
+        --numberOfPosterColumns: 2;
+    }
+}
+
+*::-ms-clear {
+    width: 0;
+    height: 0;
+}
+
+.container {
+    width: calc(100% - 32px);
+    height: 100vh;
+    margin: 0 auto;
+
+    .content {
+        margin: 0 auto;
+    }
+}
+
+.flex-center-row {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.flex-center-column {
+    @extend .flex-center-row;
+    flex-direction: column;
+}
+
+.text-align-center {
+    text-align: center;
+}
+
+.pointer {
+    cursor: pointer;
+}

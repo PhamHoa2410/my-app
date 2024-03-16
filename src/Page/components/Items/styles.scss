@@ -1,0 +1,33 @@
+.items__content {
+    position: relative;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    border: 1px solid #e3e3e3;
+    border-radius: 8px;
+    flex-direction: column;
+    overflow: hidden;
+    width: max-content;
+    height: max-content;
+    margin: 30px 10px 10px 10px;
+
+    .img-styles {
+        display: inline-block;
+        height: 336px;
+        max-height: 336px;
+        width: max-content;
+        max-width: max-content;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover
+        }
+    }
+
+    .content-items {
+        padding: 0 30px
+    }
+}
